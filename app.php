@@ -34,3 +34,27 @@ $guess = "1470"; // Tahmin edilen değer
  * 
  * yazması gerekiyor.
  */
+ 
+$bmr  = 0;
+if($gender == "male"){
+	$bmr = 88.362 + (13.397 * $weight) + (4.799 * $height) - (5.677 * $age);
+}
+else if($gender == "female"){
+	$bmr = 447.593 + (9.247 * $weight) + (3.098 * $height) - (4.330 * $age);
+}
+else{
+	echo "geçersiz cinsiyet";
+}
+
+if($bmr > $guess){
+	echo "BMR: " . $bmr. "</br>";
+	echo "Tahmin değerinden büyük";
+}
+else if($bmr < $guess){
+	echo "BMR: " . $bmr. "</br>";
+	echo "Tahmin değerinden küçük";
+}
+else{
+	echo "BMR: " . $bmr. "</br>";
+	echo "Tahmin değerine eşit";
+}
